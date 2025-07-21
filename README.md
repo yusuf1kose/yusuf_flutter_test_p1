@@ -1,6 +1,6 @@
 # yusuf_flutter_test_p1
 
-A new Flutter project.
+Initial code that satisfies requirements for the first flutter assessment.
 
 ## Getting Started
 
