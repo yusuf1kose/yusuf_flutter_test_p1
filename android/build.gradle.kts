@@ -1,3 +1,16 @@
+// android/build.gradle.kts (project level)
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // single source of truth for the Google Services plugin version
+        classpath("com.google.gms:google-services:4.4.3")
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -19,3 +32,4 @@ subprojects {
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
+

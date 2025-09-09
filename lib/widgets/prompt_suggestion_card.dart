@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PromptSuggestionCard extends StatelessWidget {
   const PromptSuggestionCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final tileBg = isDark ? const Color(0xFF232327) : const Color(0xFFF4F3F9);
+
     return Column(
       children: [
-        const Icon(Icons.help_outline_rounded, size: 22),
+        Icon(Icons.help_outline_rounded, size: 22, color: cs.onSurface.withOpacity(.85)),
         const SizedBox(height: 2),
-        const Text(
+        Text(
           'Not sure of what to ask?',
-          style: TextStyle(fontFamily: 'Poppins'),
+          style: GoogleFonts.poppins(color: cs.onSurface),
         ),
         const SizedBox(height: 12),
         Container(
@@ -20,33 +25,32 @@ class PromptSuggestionCard extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           margin: const EdgeInsets.symmetric(horizontal: 24),
           decoration: BoxDecoration(
-            color: const Color(0xFFF4F3F9),
+            color: tileBg,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Row(
             children: [
               Expanded(
                 child: RichText(
-                  text: const TextSpan(
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
+                  text: TextSpan(
+                    style: GoogleFonts.poppins(
                       fontSize: 14,
-                      color: Colors.black87,
+                      color: cs.onSurface,
                     ),
                     children: [
-                      TextSpan(text: 'Check out our preset prompts\nfor inspiration! '),
+                      const TextSpan(text: 'Check out our preset prompts\nfor inspiration! '),
                       TextSpan(
                         text: 'Let’s go →',
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        style: GoogleFonts.poppins(fontWeight: FontWeight.w600, color: cs.onSurface),
                       ),
                     ],
                   ),
                 ),
               ),
-              const CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Icon(Icons.chat_bubble_outline, color: Colors.black),
-              )
+              CircleAvatar(
+                backgroundColor: Theme.of(context).cardColor,
+                child: Icon(Icons.chat_bubble_outline, color: cs.onSurface),
+              ),
             ],
           ),
         ),

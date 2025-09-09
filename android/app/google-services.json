@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1044869702666",
+    "project_id": "finally-free-project1",
+    "storage_bucket": "finally-free-project1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044869702666:android:289d677289d79a62da6bf3",
+        "android_client_info": {
+          "package_name": "com.example.yusuf_flutter_test_p1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044869702666-l9c9quc2c2l8ipqeimqkivat4kusesgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqScTIDLHmSOdCMQ5gRARH9QihUZv7ggk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044869702666-l9c9quc2c2l8ipqeimqkivat4kusesgu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1044869702666-osq0jvlgjro98f3ocujt2t7sl2h7mg9o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.yusufFlutterTestP1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
